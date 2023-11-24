@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for the slideshow dots */
+        .dot-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* styles.css */
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4; /* Light gray background */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slideshow-container {
+            display: flex;
+        }
+
+        .tile-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow tiles to wrap to the next line */
+            justify-content: space-around; /* Evenly distribute tiles horizontally */
+        }
+
+        .tile {
+            width: 200px; /* Adjusted width */
+            border: 2px solid #3498db; /* Border color - Blue */
+            margin: 20px; /* Add space around each tile */
+            padding: 20px;
+            cursor: pointer;
+            background-color: #ecf0f1; /* Background color - Light blue */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
+            position: relative; /* Added position:relative to create a positioning context for the absolute positioning of the buttons */
+        }
+
+        .tile:hover {
+            background-color: #3498db; /* Background color on hover - Dark blue */
+            transform: scale(1.05); /* Scale up on hover */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+        }
+
+        .tile:hover button {
+            display: inline-block; /* Show buttons on hover */
+        }
+
+        h2 {
+            color: #2c3e50; /* Heading color - Dark gray */
+            font-size: 18px; /* Adjusted font size */
+        }
+
+        p {
+            color: #7f8c8d; /* Text color - Light gray */
+            font-size: 14px; /* Adjusted font size */
+            margin-bottom: 10px; /* Add margin at the bottom */
+        }
+
+        /* Button Styles */
+        button {
+            display: none; /* Initially hide the buttons */
+            width: 45%; /* Set width to 45% for two buttons in a row */
+            margin: 5px 2.5% 5px 0; /* Adjusted margin for spacing between buttons */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px; /* Adjusted font size */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        }
+
+        /* Show buttons when hovering over the tile */
+        .tile:hover button {
+            display: inline-block; /* Show buttons on hover */
+        }
+
+        button:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+            color: #fff; /* White text on hover */
+            transform: scale(1.1); /* Slightly scale up on hover */
+        }
+    </style>
+    <title>Your Website</title>
+</head>
+<body>
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <h2>Latest Event 1</h2>
+                <p>Description of the event 1.</p>
+            </div>
+            <div class="mySlides">
+                <h2>Latest Event 2</h2>
+                <p>Description of the event 2.</p>
+            </div>
+            <!-- Add more slides as needed -->
+
+            <!-- Navigation dots for the slideshow -->
+            <div class="dot-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <!-- Add more dots as needed -->
+            </div>
+        </div>
+
+        <div class="tile-container">
+
+            <!-- Civil Engineering Tile -->
+            <div class="tile" onclick="navigateTo('civil.html')">
+                <h2>Civil Engineering</h2>
+                <p>Explore the world of Civil Engineering and its various aspects.</p>
+                <button onclick="navigateTo('civil_s1.html')">s1</button>
+                <button onclick="navigateTo('civil_s2.html')">s2</button>
+                <button onclick="navigateTo('civil_s3.html')">s3</button>
+                <button onclick="navigateTo('civil_s4.html')">s4</button>
+                <button onclick="navigateTo('civil_s5.html')">s5</button>
+                <button onclick="navigateTo('civil_s6.html')">s6</button>
+            </div>
+
+            <!-- Electrical and Electronics Engineering Tile -->
+            <div class="tile" onclick="navigateTo('eee.html')">
+                <h2>EEE</h2>
+                <p>Discover the exciting field of Electrical and Electronics Engineering.</p>
+                <button onclick="navigateTo('eee_s1.html')">s1</button>
+                <button onclick="navigateTo('eee_s2.html')">s2</button>
+                <button onclick="navigateTo('eee_s3.html')">s3</button>
+                <button onclick="navigateTo('eee_s4.html')">s4</button>
+                <button onclick="navigateTo('eee_s5.html')">s5</button>
+                <button onclick="navigateTo('eee_s6.html')">s6</button>
+            </div>
+
+            <!-- Computer Technology Tile -->
+            <div class="tile" onclick="navigateTo('ct.html')">
+                <h2>CT</h2>
+                <p>Get insights into the world of Computer Technology and its innovations.</p>
+                <button onclick="navigateTo('ct_s1.html')">s1</button>
+                <button onclick="navigateTo('ct_s2.html')">s2</button>
+                <button onclick="navigateTo('ct_s3.html')">s3</button>
+                <button onclick="navigateTo('ct_s4.html')">s4</button>
+                <button onclick="navigateTo('ct_s5.html')">s5</button>
+                <button onclick="navigateTo('ct_s6.html')">s6</button>
+            </div>
+
+            <!-- Electrical Engineering Tile -->
+            <div class="tile" onclick="navigateTo('el.html')">
+                <h2>EL</h2>
+                <p>Experience the wonders of Electrical Engineering and its applications.</p>
+                <button onclick="navigateTo('el_s1.html')">s1</button>
+                <button onclick="navigateTo('el_s2.html')">s2</button>
+                <button onclick="navigateTo('el_s3.html')">s3</button>
+                <button onclick="navigateTo('el_s4.html')">s4</button>
+                <button onclick="navigateTo('el_s5.html')">s5</button>
+                <button onclick="navigateTo('el_s6.html')">s6</button>
+            </div>
+
+            <!-- Mechanical Engineering Tile -->
+            <div class="tile" onclick="navigateTo('mech.html')">
+                <h2>Mechanical Engineering</h2>
+                <p>Explore the fascinating world of Mechanical Engineering and its innovations.</p>
+                <button onclick="navigateTo('mech_s1.html')">s1</button>
+                <button onclick="navigateTo('mech_s2.html')">s2</button>
+                <button onclick="navigateTo('mech_s3.html')">s3</button>
+                <button onclick="navigateTo('mech_s4.html')">s4</button>
+                <button onclick="navigateTo('mech_s5.html')">s5</button>
+                <button onclick="navigateTo('mech_s6.html')">s6</button>
+            </div>
+
+            <!-- Add more tiles as needed -->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
