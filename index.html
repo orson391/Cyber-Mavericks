@@ -1,3 +1,5 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,87 +25,6 @@
 
         .active {
             background-color: #717171;
-        }
-
-        /* styles.css */
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4; /* Light gray background */
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .slideshow-container {
-            display: flex;
-        }
-
-        .tile-container {
-            display: flex;
-            flex-wrap: wrap; /* Allow tiles to wrap to the next line */
-            justify-content: space-around; /* Evenly distribute tiles horizontally */
-        }
-
-        .tile {
-            width: 200px; /* Adjusted width */
-            border: 2px solid #3498db; /* Border color - Blue */
-            margin: 20px; /* Add space around each tile */
-            padding: 20px;
-            cursor: pointer;
-            background-color: #ecf0f1; /* Background color - Light blue */
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
-            position: relative; /* Added position:relative to create a positioning context for the absolute positioning of the buttons */
-        }
-
-        .tile:hover {
-            background-color: #3498db; /* Background color on hover - Dark blue */
-            transform: scale(1.05); /* Scale up on hover */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
-        }
-
-        .tile:hover button {
-            display: inline-block; /* Show buttons on hover */
-        }
-
-        h2 {
-            color: #2c3e50; /* Heading color - Dark gray */
-            font-size: 18px; /* Adjusted font size */
-        }
-
-        p {
-            color: #7f8c8d; /* Text color - Light gray */
-            font-size: 14px; /* Adjusted font size */
-            margin-bottom: 10px; /* Add margin at the bottom */
-        }
-
-        /* Button Styles */
-        button {
-            display: none; /* Initially hide the buttons */
-            width: 45%; /* Set width to 45% for two buttons in a row */
-            margin: 5px 2.5% 5px 0; /* Adjusted margin for spacing between buttons */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px; /* Adjusted font size */
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
-        }
-
-        /* Show buttons when hovering over the tile */
-        .tile:hover button {
-            display: inline-block; /* Show buttons on hover */
-        }
-
-        button:hover {
-            background-color: #2980b9; /* Darker blue on hover */
-            color: #fff; /* White text on hover */
-            transform: scale(1.1); /* Slightly scale up on hover */
         }
     </style>
     <title>Your Website</title>
